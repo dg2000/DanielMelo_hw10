@@ -44,7 +44,7 @@ double** matrix_product(double** A, int filas_A, int col_A, double** B, int fila
 }
 
 
-double** get_Matriz(int M, int N)
+double** get_Matrix(int M, int N)
 {
   int i;
 
@@ -115,6 +115,12 @@ int main()
 
   int col_B;
 
+  double** A;
+
+  double** B;
+
+  double** C;
+
   cout << "Ingrese el numero de filas de la matriz A " << endl;
 
   cin >> filas_A;
@@ -134,9 +140,21 @@ int main()
       return 0;
     }
 
-  cout << "Ingrese el numerod de columnas de la matriz B" << endl;
+  cout << "Ingrese el numero de columnas de la matriz B" << endl;
 
   cin >> col_B;
+
+  cout << "Se inicializara la matriz A" << endl;
+
+  A = get_Matrix(filas_A, col_A);
+
+  cout << "Se inicializara la matriz B" << endl;
+
+  B = get_Matrix(filas_B, col_B);
+
+  C = matrix_product(A, filas_A, col_A, B, filas_B, col_B);
+
+  
 
   
 
