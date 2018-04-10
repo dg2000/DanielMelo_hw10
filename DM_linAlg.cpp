@@ -155,8 +155,17 @@ int main()
   C = matrix_product(A, filas_A, col_A, B, filas_B, col_B);
 
   
+  cout << "Ahora se imprimira la matriz resultado del producto entre A y B" << endl;
+    
+  for (int i = 0; i < filas_A; i++)
+    {
+      for (int k = 0; k < col_B; k++)
+	{
+	  cout << C[i][k] << " ";
+	}
 
-  
+      cout << endl;
+    }  
 
 
 
